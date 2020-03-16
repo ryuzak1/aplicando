@@ -32,10 +32,11 @@ public class UsuarioResource {
     }
     @DeleteMapping("{id}")
     public ResponseEntity deletar(@PathVariable("id") Long id){
-        return service.obterPorId(id).map(entidade->{
+        return service.obterPorId(id).map((entidade)->{
             service.deletar(entidade);
             return new ResponseEntity(HttpStatus.NO_CONTENT);
         }).orElseGet(()->new ResponseEntity("Lançamento",HttpStatus.BAD_REQUEST));
 
     }
+
 }

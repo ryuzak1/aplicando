@@ -9,7 +9,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
-@Table(name = "item",schema = "public")
+@Table(name = "item")
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor

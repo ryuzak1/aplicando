@@ -4,6 +4,7 @@ package com.aplicando.aplicando.model.entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -28,10 +29,8 @@ public class Compra {
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
-    @ManyToOne
+    @OneToMany
     @JoinColumn(name = "id_item")
-    private Item item;
-
-
+    private List<Item> items;
 
 }
